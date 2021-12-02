@@ -1,0 +1,38 @@
+{
+  "name": "bump-vue",
+  "version": "1.0.0",
+  "description": "Bump Chart Vue Component",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phanhuyanh/bump-vue.git"
+  },
+  "keywords": [
+    "bump chart",
+    "bump chart vue",
+    "chart vue",
+    "chart vue3",
+    "bump vue3",
+    "bump chart vue3"
+  ],
+  "author": "huyanh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phanhuyanh/bump-vue/issues"
+  },
+  "homepage": "https://github.com/phanhuyanh/bump-vue#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  }
+}
