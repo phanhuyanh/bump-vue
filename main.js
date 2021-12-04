@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Bump from './src/plugin/bump.js'
+import './style/main.sass'
 
 Vue.config.productionTip = false
 
