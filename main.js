@@ -1,7 +1,10 @@
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import Vue from 'vue'
 import App from './App.vue'
-import Bump from './src/plugin/bump.js'
 import './style/main.sass'
+
+import Bump from './src/plugin/bump.js'
 
 Vue.config.productionTip = false
 
