@@ -8,11 +8,13 @@ Bump Chart Vue Component
 ## Demo
 [Codesandbox](https://rcytl.csb.app/)
 
+## Requirement
+  > Babel 7.4.0 or later
 
 ## Installation
-
 ```js
-npm i bump-vue
+npm i bump-vue core-js regenerator-runtime
+
 ```
 
 ## Usage
@@ -20,6 +22,9 @@ npm i bump-vue
 ```js
 import Vue from 'vue'
 import Bump from 'bump-vue'
+
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
 
 Vue.use(Bump)
 
