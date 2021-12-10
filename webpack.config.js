@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const TerserPlugin = require("terser-webpack-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
@@ -39,14 +40,22 @@ module.exports = {
         use: 'babel-loader'
       },
       {
-        test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader']
-      },
-      {
         test: /\.s[a|c]ss$/,
         use: [
-          'vue-style-loader',
-          'css-loader',
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  ["autoprefixer"]
+                ],
+              },
+            }
+          },
           {
             loader: 'sass-loader',
             options: {
@@ -65,7 +74,10 @@ module.exports = {
       template: './public/index.html',
       chunks: ['main']
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'main.css'
+    })
   ],
   optimization: {
     minimize: true,
