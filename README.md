@@ -5,6 +5,10 @@ Bump-Vue
 
 Bump Chart Vue Component
 
+## Demo
+[Codesandbox](https://rcytl.csb.app/)
+
+
 ## Installation
 
 ```js
