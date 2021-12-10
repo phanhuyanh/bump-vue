@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode production",
-    "dev": "webpack --mode development --watch",
-    "start": "npx webpack serve --mode development"
+    "serve": "npx webpack serve --mode development"
   },
   "repository": {
     "type": "git",
