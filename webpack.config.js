@@ -22,11 +22,10 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist')
-    },
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 8080,
+    publicPath: 'http://localhost:8080/'
   },
   module: {
     rules: [
